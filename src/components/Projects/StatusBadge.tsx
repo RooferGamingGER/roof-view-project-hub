@@ -10,6 +10,15 @@ interface StatusBadgeProps {
   showLabel?: boolean;
 }
 
+interface StatusConfig {
+  icon: React.ElementType;
+  bg: string;
+  text: string;
+  border: string;
+  label: string;
+  iconClass?: string; // Make iconClass optional in the type
+}
+
 const StatusBadge: React.FC<StatusBadgeProps> = ({
   status,
   size = 'md',
@@ -21,7 +30,7 @@ const StatusBadge: React.FC<StatusBadgeProps> = ({
     lg: 'text-base py-1.5 px-4',
   };
 
-  const statusConfig = {
+  const statusConfig: Record<ProjectStatus, StatusConfig> = {
     pending: {
       icon: Clock,
       bg: 'bg-status-pending/20',

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Plus } from 'lucide-react';
+import { Plus, Building2 } from 'lucide-react'; // Import Building2 icon
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Layout/Navbar';
 import ProjectCard from '@/components/Projects/ProjectCard';
